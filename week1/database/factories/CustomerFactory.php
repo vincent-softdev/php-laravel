@@ -2,6 +2,7 @@
 
 namespace Database\Factories;
 
+use App\Models\Customer;
 use Illuminate\Database\Eloquent\Factories\Factory;
 
 /**
@@ -14,7 +15,9 @@ class CustomerFactory extends Factory
      *
      * @return array<string, mixed>
      */
-    public function definition(): array
+    protected $model = Customer::class;
+
+    public function definition()
     {
         // Random I or B which stands for Individual or Business
         // Faker is used to generate fake data for various purposes such as testing, database boostrapping
